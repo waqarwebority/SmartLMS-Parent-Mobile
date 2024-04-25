@@ -8,16 +8,19 @@ const HomeWorkRenders = ({ item }) => {
     console.log(item);
     return (
         <View style={[styles.homeWorkBox, { backgroundColor: item.subjectStatus === 'completed' ? COLORS.lightSuccess : COLORS.lightWarning }]}>
-            <View style={{flexDirection:'row', alignItems:'center', justifyContent:'space-between'}}>
-                <Image source={Icons.homeWorkImage} style={styles.homeWorkImage} />
-                <View>
-                    <Text style={styles.homeWorkSubject}>
-                        Financial Accounting
-                    </Text>
-                    <Text style={styles.homeWorkType}>
-                        Accounting Basics
-                    </Text>
+            <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+                <View style={{flexDirection:'row', alignItems:'center'}}>
+                    <Image source={Icons.homeWorkImage} style={styles.homeWorkImage} />
+                    <View>
+                        <Text style={styles.homeWorkSubject}>
+                            Financial Accounting
+                        </Text>
+                        <Text style={styles.homeWorkType}>
+                            Accounting Basics
+                        </Text>
+                    </View>
                 </View>
+                <Image source={item.subjectStatus === 'completed' ? Icons.completed : Icons.pending} style={styles.homeWorkStatusIcon} />
             </View>
         </View>
     )
@@ -46,5 +49,10 @@ const styles = StyleSheet.create({
         fontFamily: FONTS.GilroySemiBold600,
         fontSize: Responsive.width(16),
         color: COLORS.mediumBlack
+    },
+    homeWorkStatusIcon: {
+        width: Responsive.width(20),
+        height: Responsive.height(20),
+        resizeMode: 'contain'
     }
 })

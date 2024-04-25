@@ -10,8 +10,7 @@ import HomeWorkRenders from '../../../components/flatListRenders/home/HomeWorkRe
 const homeWorkData = [
   { id: '1', subjectName: 'Financial Accounting', subjectWork: 'Video Conferencing', subjectStatus: 'completed' },
   { id: '2', subjectName: 'Financial Accounting', subjectWork: 'Accounts Statements', subjectStatus: 'pending' },
-  { id: '3', subjectName: 'Financial Accounting', subjectWork: 'Finance', subjectStatus: 'completed' },
-  { id: '4', subjectName: 'Financial Accounting', subjectWork: 'Finance', subjectStatus: 'completed' },
+ 
 ]
 
 const Home = () => {
