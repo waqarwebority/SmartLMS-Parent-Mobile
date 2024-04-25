@@ -8,7 +8,7 @@ const HomeWorkRenders = ({ item }) => {
     console.log(item);
     return (
         <View style={[styles.homeWorkBox, { backgroundColor: item.subjectStatus === 'completed' ? COLORS.lightSuccess : COLORS.lightWarning }]}>
-            <View style={{flexDirection:'row', alignItems:'center'}}>
+            <View style={{flexDirection:'row', alignItems:'center', justifyContent:'space-between'}}>
                 <Image source={Icons.homeWorkImage} style={styles.homeWorkImage} />
                 <View>
                     <Text style={styles.homeWorkSubject}>
